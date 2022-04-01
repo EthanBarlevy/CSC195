@@ -9,13 +9,13 @@ int main()
 {
     string name;
     char initial;
-    unsigned int age;
+    unsigned short age;
     bool isAdult;
     unsigned int zipcode;
     float wage;
-    unsigned int daysWorked;
-    unsigned int hoursWorkedPerDay[7];
-    const float TAX = 0.08;
+    unsigned short daysWorked;
+    unsigned short hoursWorkedPerDay[7];
+    const float TAX = 0.08f;
 
     cout << "Enter first name: ";
     cin >> name;
@@ -25,10 +25,7 @@ int main()
 
     cout << "Enter age: ";
     cin >> age;
-
-    if (age >= 18) {
-        isAdult = true;
-    }
+    isAdult = (age >= 18);
 
     cout << "Enter zipcode: ";
     cin >> zipcode;
@@ -39,8 +36,8 @@ int main()
     cout << "Enter how many days worked last week: ";
     cin >> daysWorked;
 
-    unsigned int totalHours = 0;
-    for (int i = 0; i < daysWorked; i++) {
+    unsigned short totalHours = 0;
+    for (short i = 0; i < daysWorked; i++) {
         cout << "Enter hours worked on day " << i + 1 << ": ";
         cin >> hoursWorkedPerDay[i];
         totalHours += hoursWorkedPerDay[i];
@@ -53,7 +50,7 @@ int main()
     cout << "Gross Income: $" << grossIncome << endl;
     cout << "Net Income: $" << netIncome << endl;
 
-
+    return 0;
 }
 
 
