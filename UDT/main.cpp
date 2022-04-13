@@ -8,22 +8,21 @@
 
 int main()
 {
-    vector<Employee> employees;
+    vector<Employee*> employees;
     unsigned int numEmployees;
     cout << "Number of employees: ";
     cin >> numEmployees;
 
     for (unsigned int i = 0; i < numEmployees; i++) {
         cout << "Employee #" << i + 1 << ":" << endl;
-        Employee test; // this is really gross but it works i guess
-        employees.push_back(test);
-        employees.at(i).Read();
+        employees.push_back(new Employee());
+        employees.at(i)->Read();
         cout << endl;
     }
 
     for (unsigned int i = 0; i < employees.size(); i++) {
         cout << "Employee #" << i + 1 << ":" << endl;
-        employees.at(i).Write();
+        employees.at(i)->Write();
         cout << endl;
     }
 }
