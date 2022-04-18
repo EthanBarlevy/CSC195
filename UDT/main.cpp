@@ -23,7 +23,10 @@ int main()
     for (unsigned int i = 0; i < employees.size(); i++) {
         cout << "Employee #" << i + 1 << ":" << endl;
         employees.at(i)->Write();
+        delete employees.at(i);
         cout << endl;
     }
+
+    employees.clear();
 }
 
