@@ -17,7 +17,7 @@ namespace edb {
 		}
 
 		void TakeDamage(int damage);
-		void BattleCry();
+		virtual void BattleCry();
 		void Heal(int); // you can technically do this because it is the only important part but its gross so dont do it
 
 		// generally only put getters and setters definition in the .h

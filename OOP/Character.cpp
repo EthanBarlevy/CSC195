@@ -9,7 +9,7 @@ namespace edb {
 
 	void Character::BattleCry()
 	{
-		std::cout << "UwU! Tis I, " << name << "!" << std::endl;
+		std::cout << "UwU! Tis I, " << name << "!\n";
 	}
 
 	void Character::Heal(int health)
