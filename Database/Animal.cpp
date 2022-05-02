@@ -6,6 +6,12 @@ namespace edb {
 	{
 		Actor::Read(ostream, istream);
 
+		ostream << "Enter name: ";
+		istream >> name;
+
+		ostream << "Enter hp: ";
+		istream >> hp;
+
 		ostream << "Enter legs: ";
 		istream >> legs;
 	}
@@ -14,6 +20,22 @@ namespace edb {
 	{
 		Actor::Write(ostream);
 
+		ostream << "Name: " << name << std::endl;
+		ostream << "hp: " << hp << std::endl;
 		ostream << "legs: " << legs << std::endl;
+	}
+
+	void Animal::Read(std::ifstream& istream)
+	{
+		istream >> name;
+		istream >> hp;
+		istream >> legs;
+	}
+
+	void Animal::Write(std::ofstream& ostream)
+	{
+		ostream << name << std::endl;
+		ostream << hp << std::endl;
+		ostream << legs << std::endl;
 	}
 }

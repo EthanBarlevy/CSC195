@@ -7,16 +7,18 @@ using namespace edb;
 
 int main() {
 	Database database;
-	string name;
+	string name; // i hate that this is here but it would not let me put it in the switch statement which i am still mad about
 
 	bool quit = false;
 	while (!quit) {
 		cout << endl;
-		cout << "1) Create\n";
+		cout << "1) Add\n";
 		cout << "2) Display all\n";
 		cout << "3) Display Name\n";
 		cout << "4) Display Type\n";
-		cout << "5) Quit\n";
+		cout << "5) Save\n";
+		cout << "6) Load\n";
+		cout << "7) Quit\n";
 		cout << "Enter Selection: ";
 
 		int selection;
@@ -32,7 +34,7 @@ int main() {
 			cin >> type;
 
 			cout << endl;
-			database.create(static_cast<Actor::eType>(type));
+			database.Add(static_cast<Actor::eType>(type));
 			break;
 
 		case 2:
@@ -42,7 +44,6 @@ int main() {
 		case 3:
 			cout << endl;
 			cout << "Enter Name: ";
-
 			
 			cin >> name;
 
@@ -63,6 +64,26 @@ int main() {
 			break;
 
 		case 5:
+		{
+			string fileName;
+			cout << "Enter filename: ";
+			cin >> fileName;
+			database.Save(fileName);
+		}
+
+			break;
+			
+		case 6:
+		{
+			string fileName;
+			cout << "Enter filename: ";
+			cin >> fileName;
+			database.Load(fileName);
+		}
+
+			break;
+
+		case 7:
 			quit = true;
 			break;
 			

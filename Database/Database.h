@@ -7,13 +7,19 @@
 namespace edb {
 	class Database {
 	public:
-		void create(Actor::eType type);
+		void Add(Actor::eType type);
+
+		void Load(const std::string& filename);
+		void Save(const std::string& filename);
 
 		void DisplayAll();
 		void Display(const std::string& name);
 		void Display(Actor::eType type);
 
 		~Database();
+
+	private:
+		Actor* create(Actor::eType type);
 
 	private:
 		std::vector<Actor*> actors;

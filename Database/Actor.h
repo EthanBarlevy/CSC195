@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <fstream>
 
 namespace edb {
 	class Actor {
@@ -17,6 +18,9 @@ namespace edb {
 
 		virtual void Read(std::ostream& ostream, std::istream& istream) {}
 		virtual void Write(std::ostream& ostream) {}
+
+		virtual void Read(std::ifstream& istream) {}
+		virtual void Write(std::ofstream& ostream) {}
 
 		std::string getName() { return name; }
 		virtual eType getType() { return eType::Enemy;  }
