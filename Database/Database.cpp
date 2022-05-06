@@ -68,7 +68,8 @@ namespace edb {
 	void Database::DisplayAll()
 	{
 		for (auto actor : actors) {
-			actor->Write(std::cout);
+			std::cout << actor;
+			//actor->Write(std::cout);
 		}
 	}
 
@@ -76,7 +77,8 @@ namespace edb {
 	{
 		for (auto actor : actors) {
 			if (actor->getName() == name) {
-				actor->Write(std::cout);
+				std::cout << actor;
+				//actor->Write(std::cout);
 			}
 		}
 	}
@@ -85,7 +87,8 @@ namespace edb {
 	{
 		for (auto actor : actors) {
 			if (actor->getType() == type) {
-				actor->Write(std::cout);
+				std::cout << actor;
+				//actor->Write(std::cout);
 			}
 		}
 	}

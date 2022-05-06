@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f354212b-7d77-432c-b1fa-159cafb04444}</ProjectGuid>
-    <RootNamespace>Database</RootNamespace>
+    <ProjectGuid>{839fb426-a7ca-4a51-a6fa-3266f8094af2}</ProjectGuid>
+    <RootNamespace>Overload</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,17 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Animal.cpp" />
-    <ClCompile Include="Database.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="mian.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Actor.h" />
-    <ClInclude Include="Animal.h" />
-    <ClInclude Include="Database.h" />
-    <ClInclude Include="Enemy.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
