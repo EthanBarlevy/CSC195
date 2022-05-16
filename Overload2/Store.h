@@ -12,6 +12,8 @@
 		bool operator == (const Store& item);
 		bool operator != (const Store& item);
 
+		bool operator == (std::string name);
+
 		friend std::ostream& operator << (std::ostream& output, const Store& item);
 
 		std::string getName() { return name; }

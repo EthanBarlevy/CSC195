@@ -27,6 +27,11 @@ bool Store::operator!=(const Store& item)
         return this->profits != item.profits;
     }
 
+bool Store::operator==(std::string name)
+{
+    return this->name == name;
+}
+
 std::ostream& operator << (std::ostream& output, const Store& item)
     {
         output << item.name << " $" << item.profits;

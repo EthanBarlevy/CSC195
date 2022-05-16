@@ -10,7 +10,7 @@ int main()
 	stores.push_back(new Store("Wallmart", 10));
 	stores.push_back(new Store("Target", 12));
 	stores.push_back(new Store("Costco", 14));
-	
+
 	for (auto store : stores) {
 		cout << *store << endl;
 	}
